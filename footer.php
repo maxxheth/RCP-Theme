@@ -1,13 +1,19 @@
 <!--Basic footer-->
 <footer class="rcp-footer">
-    <nav class="rcp-footer__nav">
-        <ul>
-            <li><a href="<?php echo get_home_url(); ?>">Home</a></li>
-            <li><a href="<?php echo get_permalink(); ?>"></a>About</li>
-            <li><a href="<?php echo get_permalink(); ?>"></a>History</li>
-            <li><a href="<?php echo get_permalink(); ?>"></a>Past Projects</li>
-        </ul>
-    </nav>
+
+<?php 
+
+    $rcp_nav_items_footer = wp_get_nav_menu_items( 'RCP Footer Menu' );
+
+?>
+
+<nav class="rcp-footer__nav">
+	<?php foreach ($rcp_nav_items_footer as $nav_item) : ?>
+	
+	<li class="rcp-footer__nav--item"><a href="<?php echo $nav_item->url ?>"><?php echo $nav_item->title; ?></a></li>
+
+	<?php endforeach; ?>
+</nav>
 </footer>
 <?php wp_footer(); ?>
 </body>
