@@ -1,4 +1,5 @@
 <!--Basic footer-->
+<!--Another comment-->
 <footer class="rcp-footer">
 
 <?php 
