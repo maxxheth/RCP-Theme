@@ -33,10 +33,17 @@ require('helper-funcs/pretty_print_r.php');
 
 <?php
 
-   $rcp_nav = wp_get_nav_menu_object( 'RCP Main Menu' );
+   $rcp_nav_items_header = wp_get_nav_menu_items( 'RCP Header Menu' );
 
-   pretty_print_r($rcp_nav);
 
 ?>
+
+<nav class="rcp-header__nav">
+	<?php foreach ($rcp_nav_items_header as $nav_item) : ?>
+	
+	<li class="rcp-header__nav--item"><a href="<?php echo $nav_item->url ?>"><?php echo $nav_item->title; ?></a></li>
+
+	<?php endforeach; ?>
+</nav>
 
 </header>
