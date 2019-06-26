@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require('helper_funcs/pretty_print_r.php');
+require(__DIR__ . '/helper_funcs/pretty_print_r.php');
 
 /**
  * The header for our theme
